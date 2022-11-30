@@ -1,0 +1,115 @@
+.blog {
+
+    // .blog__container
+
+    &__container {
+    }
+
+    // .blog__title 
+
+    &__title {
+        margin: 0px 0px 50px 0px;
+        padding: 0px 10px;
+
+        @include media-tablet {
+            margin: 0px 0px 40px 0px;
+        }
+
+        @include media-mobile {
+            margin: 0px 0px 30px 0px;
+        }
+        
+    }
+
+    // .blog__title
+
+    &__article-title {
+        margin: 0px 0px 10px 0px;
+        display: inline-block;
+        @include font(3.0rem, 4.4rem, 500);
+        @extend %transition;
+        text-decoration: none;
+        display: inline-block;
+        color: inherit;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        @include media-tablet {
+            @include font(2.8rem, 4.0rem, 500);
+            margin: 0px 0px 8px 0px;
+        }
+
+        @include media-mobile {
+            @include font(2.6rem, 3.8rem, 500);
+            margin: 0px 0px 5px 0px;
+        }
+
+    }
+
+    // .blog__items
+
+    &__items {
+        padding: 0px 10px 50px 10px; 
+    }
+
+    // .blog__item
+
+    &__item {
+        padding: 0px 0px 30px 0px;
+        margin: 0px 0px 30px 0px;
+        border-bottom: 1px solid #E0E0E0;
+
+        &:last-child {
+            margin: 0px 0px 0px 0px;
+        }
+
+        @include media-tablet {
+            padding: 0px 0px 25px 0px;
+            margin: 0px 0px 25px 0px;
+        }
+        
+    }
+
+    // .blog__info
+
+    &__info {
+        display: flex;
+        @include font(2.0rem, 2.9rem, 400);
+        margin: 0px 0px 10px 0px;
+
+        @include media-tablet {
+            @include font(1.8rem, 2.6rem, 400);
+            margin: 0px 0px 8px 0px;
+        }
+
+        @include media-mobile {
+            @include font(1.6rem, 2.4rem, 400);
+            margin: 0px 0px 5px 0px;
+        }
+    }
+
+    // .blog__date
+
+    &__date {
+    }
+
+    // .blog__separator
+
+    &__separator {
+        margin: 0px 15px;
+        
+    }
+
+    // .blog__category
+
+    &__category {
+        color: #8695A4;
+    }
+
+    // .blog__text
+
+    &__text {
+    }
+}

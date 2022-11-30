@@ -1,0 +1,74 @@
+.article {
+
+    // .article__container
+
+    &__container {
+        padding: 0px 20px;
+    }
+
+    // .article__title
+
+    &__title {
+        @include font(3.4rem, 5.0rem, 700);
+        margin: 0px 0px 20px 0px;
+    }
+
+    // .article__info
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 20px 0px;
+
+        >*:not(:last-child) {
+            margin: 0px 17px 0px 0px;
+        }
+
+    }
+
+    // .article__year
+
+    &__year {
+        background-color: $color-primary;
+        @include font(1.8rem, 1.8rem, 900);
+        padding: 5px 10px;
+        border-radius: 16px;
+        color: #fff;
+    }
+
+    // .article__category
+
+    &__category {
+        @include font(2.0rem, 2.9rem, 400);
+        color: $color-dark;
+    }
+
+    // .article__text
+
+    &__text {
+        margin: 0px 0px 30px 0px;
+    }
+
+    // .article__image
+
+    &__image {
+        margin: 0px 0px 25px 0px;
+
+        img {
+            max-width: 100%
+        }
+
+    }
+
+    // .article__heading-one
+
+    &__heading-one {
+        @include font(3.0rem, 6.0rem, 500);
+    }
+
+    // .article__heading-two
+
+    &__heading-two {
+        @include font(2.4rem, 4.5rem, 500);
+    }
+}

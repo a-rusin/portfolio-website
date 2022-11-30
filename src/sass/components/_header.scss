@@ -32,6 +32,9 @@
     // .menu__body
 
     &__body {
+
+        @extend %transition;
+
         @include media-tablet {
             position: fixed;
             width: 100%;
@@ -39,8 +42,12 @@
             top: 0;
             left: -100%;
             overflow: auto;
-            padding: 60px 10px 30px 10px;
-            background-color: #fff;
+            padding: 100px 10px 30px 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        &._active {
+            left: 0;
         }
 
     }
@@ -80,6 +87,10 @@
             color: $color-primary;
         }
 
+        &._active {
+            color: $color-primary;
+        }
+
         @include media-tablet {
             @include font(4.0rem, 4.0rem, 500);
             display: block;
@@ -91,7 +102,12 @@
 }
 
 .icon-menu {
+    
     display: none;
+
+    span {
+        @extend %transition;
+    }
 
     @include media-tablet {
         display: block;
@@ -124,17 +140,19 @@
 
             span {
                 transform: scale(0);
+
+                &:first-child {
+                    transform: rotate(-45deg);
+                    top: calc(50% - 1px);
+                }
+    
+                &:last-child {
+                    transform: rotate(45deg);
+                    bottom: calc(50% - 1px);
+                }
             }
 
-            &:first-child {
-                transform: rotate(-45deg);
-                top: calc(50% - 1px);
-            }
 
-            &:last-child {
-                transform: rotate(45deg);
-                bottom: calc(50% - 1px);
-            }
 
         }
 

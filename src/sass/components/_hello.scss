@@ -1,13 +1,13 @@
 .hello {
 
-    padding: 30px 0px 70px 0px;
+    padding: 0px 0px 70px 0px;
 
     @include media-tablet {
-        padding: 0px 0px 70px 0px;
+        padding: 10px 0px 70px 0px;
     }
 
-    @include media-tablet {
-        padding: 0px 0px 60px 0px;
+    @include media-mobile {
+        padding: 10px 0px 60px 0px;
     }
 
     // .hello__container
